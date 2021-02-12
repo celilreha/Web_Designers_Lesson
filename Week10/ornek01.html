@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular JS Demo</title>
+</head>
+
+<body ng-app="App">
+
+    <div ng-controller="myController">
+        First name: <input type="text" ng-model="firstName"><p>
+        Last name: <input type="text" ng-model="lastName"><p>
+        <p>Full name: {{firstName+" "+lastName}}</p>
+    </div>
+    <script>
+        var t = angular.module('App', []);
+        t.controller('myController', function ($scope) {
+            $scope.firstName = "";
+            $scope.lastName = "";
+            $scope.fullName = $scope.firstName + $scope.lastName;
+        });
+    </script>
+</body>
+
+</html>
