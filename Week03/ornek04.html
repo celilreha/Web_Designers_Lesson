@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+        <script>
+            class hasta{
+                constructor(id,adi){
+                    this.id=id;
+                    this.adi=adi;
+                }
+
+            }
+                var dizi=[];
+                function ekle(){
+                    var h=new hasta;
+                    h.adi=document.getElementById("HAdi").value;
+                    h.id=document.getElementById("HId").value;
+                    dizi.push(h);
+                }
+                function goster(){
+                    p1.innerHTML="<ul>";
+                    p1.innerHTML+="<li>Id Adı</li>";
+                    for (let i = 0; i < dizi.length; i++) {
+                        p1.innerHTML+="<li>"+dizi[i].id+" "+dizi[i].adi+"</li>";
+                    }
+                    p1.innerHTML+="</ul>";
+                }
+            </script>
+    Hasta Id: <input type="text" id="HId">
+    <button id="ekle" onclick="ekle()">Ekle</button>
+    <button id="goster" onclick="goster()">Göster</button>
+    <p></p>
+    Adı Soyadı: <input type="text" id="HAdi">
+    <p id="p1"></p>
+
+</body>
+</html>

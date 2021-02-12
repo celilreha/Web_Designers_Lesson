@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function uyari(){
+            alert(text1.value)
+            //alert(document.getElementById("1").value)
+        }
+        function getResult(){
+            var x=document.forms["form1"];
+            var text="";
+            var i;
+            for(i=0; i<x.length;i++){
+                text+=x.elements[i].value+"<p>";
+            }
+            p2.innerHTML=text;
+        }
+    </script>
+</head>
+<body>
+    <form id="form1">
+    <input type="text" id="text1" value="deneme">
+    <input type="text" id="text2" value="deneme">
+    <p id="p1"></p>
+    
+    <button onclick="uyari()">Mesaj Ver</button>
+    <!--<button onclick="document.getElementById('p1').innerHTML=Date()">Değer Ver</button>-->
+    
+</form>
+<br>
+<button onclick="getResult()">Form Bilgileri</button>
+<br>
+<p id="p2"></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function getResult(){
+                var x=document.forms["form1"];
+                var i;
+                for(i=0; i<x.length;i++){
+                    x.elements[i].value+=" changed"
+                }
+                
+            }
+    </script>
+</head>
+<body>
+        <form id="form1">
+            <input type="text" id="text1" value="deneme">
+            <input type="text" id="text2" value="deneme">
+            <input type="text" id="text3" value="deneme">
+            <p id="p1"></p>
+                
+        </form>
+        <button onclick="getResult()">Form</button>
+        <p id="p2"></p>
+</body>
+</html>
